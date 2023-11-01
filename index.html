@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Giriş</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-12 col-md-6 px-5">
+          <h1>1. örnek</h1>
+          <h4>Sinema da koltuk seçimi (paribu cineverse)</h4>
+          <div class="py-3">
+            <img
+              class="img-fluid"
+              src="assets/images/paribukoltuk.png"
+              alt="Sinema"
+            />
+            <p class="py-3">
+              Sinema salonunda koltuk seçimi ekranı js eklentisi ile js devre
+              dışı bırakılınca görünmemektedir, çünkü veriler backend den
+              çekilemiyor. <br />
+              koltuk seçmek veya rezerve edilmiş koltukları tekrar seçmemek için
+              yine js kullanılır. <br />
+              Örnek kod yazarsak; const container =
+              document.querySelector('.container') (bütün container ı seçtik)
+              <br />
+              container.addEventListener('click', function(e) {
+              if(e.target.classList.contains('seat') &&
+              !e.target.classList.contains('reserved')) {
+              e.target.classList.toogle('selected'); kodlar... } }) <br />
+              yukardaki ufak kod örneğinde container a click olunduğunda koltuk
+              içeren bir div varsa ve bu rezerve değilse onu seçebiliyoruz,
+              selected class ı ile toggle oluşturabiliyoruz.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 px-5">
+          <h1>2. Örnek</h1>
+          <h4>Spotify Dil Desteği</h4>
+          <div class="py-3">
+            <img
+              class="img-fluid"
+              src="assets/images/spotifydil.png"
+              alt="Spotify"
+            />
+            <p class="py-3">
+              Spotify da js devre dışı bırakıldığında, Türkçe-İngilizce gibi dil
+              seçeneği kısmı navbar ın üstünde görünmemektedir. Dil desteği
+              paketi js ile sağlanmaktadır.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-12 col-md-6 px-5">
+          <h1>3. örnek</h1>
+          <div class="py-3">
+            <h4>İnstagram beğen butonu</h4>
+            <p class="py-3">
+              İnstagramda 'beğen' butonunu seçiyoruz queryselector veya
+              getElement ile, daha sonra addEventListener ekleyip click
+              olduğunda span style ini değiştiriyoruz, toggle olabiliyor ve
+              beğen ya da beğenmekten vazgeç şeklinde iki style yazılıyor.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 px-5">
+          <h1>4. örnek</h1>
+          <div class="py-3">
+            <h4>İnstagram fotograflarda slider</h4>
+            <img
+              class="img-fluid"
+              src="assets/images/instagramslider.png"
+              alt=""
+            />
+            <p class="py-3">
+              Container içinde var olan bütün resimler slayt class ı adı altında
+              yazılır. <br />
+              queryselector ile slayt seçilir. Önceki slayt için ve sonraki
+              slayt için ayrı ayrı fonksiyonlar yazılır. <br />
+              En son slayt göster ile fonksiyon yazıldığında yeni görünecek
+              slayt için display: block denilir, geçecek slayt için display:
+              none verilir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-12 col-md-6 px-5">
+          <h1>5. örnek</h1>
+          <div class="py-3">
+            <h4>İnstagram takipçileri göster butonu</h4>
+            <p class="py-3">
+              takipçiler butonu seçilir ve api ile backend den veriler
+              getirilir, veriler gösterilirken ana sayfanın z-index i azaltılır,
+              arka plana atılır.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 px-5">
+          <h1>6. örnek</h1>
+          <div class="py-3">
+            <h4>
+              Trendyol ürün fotoğraflarını backend den fetch-api ile getirme
+            </h4>
+            <img
+              class="img-fluid"
+              src="assets/images/trendyolurun.png"
+              alt=""
+            />
+            <p class="py-3">
+              ilgili ürün fotografı fetch-api ile backendden çekilir ve
+              container içine position:relative özelliği ile eklenir. örneğin
+              renk alternatifi var ise position: absolute ve z-index ile
+              fotograf üzerine eklenebilir
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-12 col-md-6 px-5">
+          <h1>7. örnek</h1>
+          <div class="py-3">
+            <h4>Trendyol ürünleri filtreleme</h4>
+            <p class="py-3">
+              Ürünlerin her biri dizi içinde obje olarak tanımlanır,
+              id/class/title/category gibi değerler verilir. Kategoriye göre
+              filter ve if-else ile sınıflandırma yapılır ve ona göre
+              listelenir.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 px-5">
+          <h1>8. örnek</h1>
+          <div class="py-3">
+            <h4>Trendyol login-logout butonu (Authentication işlemi)</h4>
+            <img
+              class="img-fluid"
+              src="assets/images/trendyol-error-box.png"
+              alt=""
+            />
+            <p class="py-3">
+              Kişi giriş yapmışsa, logout butonun etkin olması eğer giriş
+              yapmamış ise login butonunun etkin olması js ile sağlanmaktadır.
+              <br />
+              Ayrıca kişi geçersiz e-posta girerse ya da boş girerse try-catch
+              de işlem catch e düşer ve error u yakalar, ekrana css kodları
+              yazılmış kutu içerisinde alert verebilir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-12 col-md-6 px-5">
+          <h1>9. örnek</h1>
+          <div class="py-3">
+            <h4>Trendyol navbarda input seçilemiyor ve yazı yazılamıyor</h4>
+            <img class="img-fluid" src="assets/images/input.png" alt="" />
+            <p class="py-3">
+              Input arama butonu js-queryselector ile seçilmiş ve
+              addEventListener ile fonksiyon eklenmiştir. JS devredışı
+              bırakılınca input etkin olmamaktadır.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 px-5">
+          <h1>10. örnek</h1>
+          <div class="py-3">
+            <h4>Trendyol sepet işlemleri</h4>
+            <img
+              class="img-fluid"
+              src="assets/images/trendyolsepet.png"
+              alt=""
+            />
+            <p class="py-3">
+              Trenyol sepete ürün ekleme ve çıkarma işlemleri için js
+              gereklidir. Sepete ürün eklendiğinde sepetteki sayının artması
+              veya sınır konulduysa ve fazla ürün eklendiyse 'ürün sayısı fazla
+              seçildi' gibi uyarı vermesi js ile yapılmaktadır.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-12 col-md-6 px-5">
+          <h1>11. örnek</h1>
+          <div class="py-3">
+            <h4>Youtube aside scrollbar</h4>
+            <img
+              class="img-fluid"
+              src="assets/images/youtubescrollbar.png"
+              alt=""
+            />
+            <p class="py-3">Scrollbar js etkin olmayınca görünmemektedir.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 px-5">
+          <h1>12. örnek</h1>
+          <div class="py-3">
+            <h4>Hepsiburada konum seç butonu</h4>
+            <img
+              class="img-fluid"
+              src="assets/images/hepsiburadakonum.png"
+              alt=""
+            />
+            <p class="py-3">
+              JS devre dışı bırakılınca navbar daki konum butonu etkisiz hale
+              gelmektedir ve backend den veri çekilememektedir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-12 col-md-6 px-5">
+          <h1>13. örnek</h1>
+          <div class="py-3">
+            <h4>Netflix Login işlemleri (Authentication page)</h4>
+            <img
+              class="img-fluid"
+              src="assets/images/netflixlogin.png"
+              alt=""
+            />
+            <p class="py-3">
+              Netflix login işlemleri js devredışı bırakılınca etkin
+              olmamaktadır.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 px-5">
+          <h1>14. örnek</h1>
+          <div class="py-3">
+            <h4>bootstrap npm package copy svg görünmemesi</h4>
+            <img
+              class="img-fluid"
+              src="assets/images/Bootstrapnpmpackage.png"
+              alt=""
+            />
+            <p class="py-3">
+              JS devre dışı bırakılınca react da kullanılacak npm package
+              linkini kopyalamak için gerekli olan svg nin kaybolması ve js
+              devreye girince copy svg nin görünmesi.
+              <br />
+              Svg ye click olunması ve kopyalama işlemi için gerekli olan
+              fonksiyon js ile yazılmıştır.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-12 col-md-6 px-5">
+          <h1>15. örnek</h1>
+          <div class="py-3">
+            <h4>Github Navbar- Sidebar repository ler</h4>
+            <img class="img-fluid" src="assets/images/Github.png" alt="" />
+            <p class="py-3">
+              Github navbar kısmının açılıp kapanması js ile sağlanmaktadır,
+              ayrıca github aside kısmında repository ler ekrana yazdırılması JS
+              sayesinde olmaktadır.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 px-5">
+          <h1>16. örnek</h1>
+          <div class="py-3">
+            <h4>Github main kısmında haber akışı</h4>
+            <img
+              class="img-fluid"
+              src="assets/images/githubmainsection.png"
+              alt=""
+            />
+            <p class="py-3">
+              Github main sectionda haber akışının sağlanması api ile veri
+              çekilmesi sayesinde olmaktadır.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-12 col-md-6 px-5">
+          <h1>17. örnek</h1>
+          <div class="py-3">
+            <h4>Yemeksepeti konum input</h4>
+            <img
+              class="img-fluid"
+              src="assets/images/yemeksepetikonum.png"
+              alt=""
+            />
+            <p class="py-3">
+              JS devredışı bırakıldığında konum input tümden devre dışı
+              olmaktadır ve görünmemektedir. Input a yine click olma ve gerekli
+              verinin çekilmesi de JS sayesinde olmaktadır
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 px-5">
+          <h1>18. örnek</h1>
+          <div class="py-3">
+            <h4>Media markt ürün cardları</h4>
+            <img
+              class="img-fluid"
+              src="assets/images/mediamarktcard.png"
+              alt=""
+            />
+            <p class="py-3">
+              Media markt ürün cardları için gerekli olan veri çekilmesi js ile
+              sağlanmaktadır. Cardlara click olunması ve ürünün detayının
+              gösterilmesi yine js ile sağlanmaktadır.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-12 col-md-6 px-5">
+          <h1>19. örnek</h1>
+          <div class="py-3">
+            <h4>Mediamarkt navbar style</h4>
+            <img
+              class="img-fluid"
+              src="assets/images/mediamarktnavbarstyle.png"
+              alt=""
+            />
+            <p class="py-3">
+              JS ile navbar menu id/class na göre seçilir ve click olduğunda
+              style veya class değişimi ile menü görünür hale getirilir, width
+              de değişiklik yapılabilir veya display özelliği ile none -> block
+              olarak değiştirilebilir. İşlem toggle olabilir.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 px-5">
+          <h1>20. örnek</h1>
+          <div class="py-3">
+            <h4>Facebook giriş-kaydol</h4>
+            <img
+              class="img-fluid"
+              src="assets/images/facebookgiriş.png"
+              alt=""
+            />
+            <p class="py-3">
+              Facebook kaydolmak-giriş yapmak için js gereklidir, backend veri
+              gönderilir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-12 col-md-6 px-5">
+          <h1>21. örnek</h1>
+          <div class="py-3">
+            <h4>Javascript ile hesap makinesi</h4>
+            <img
+              class="img-fluid"
+              src="assets/images/hesapmakinesi.png"
+              alt=""
+            />
+            <p class="py-3">
+              JS ile button lar seçilmekte ve işlem yapabilmek için gerekli
+              fonksiyon yazılmaktadır.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 px-5">
+          <h1>22. örnek</h1>
+          <div class="py-3">
+            <h4>Mozilla background theme</h4>
+            <img
+              class="img-fluid"
+              src="assets/images/mozillatheme.png"
+              alt=""
+            />
+            <p class="py-3">
+              Background color değişmesi için JS ile fonksiyon yazılmaktadır,
+              class değişimi ile veya style tanımlama ile theme değişmektedir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-12 col-md-6 px-5">
+          <h1>23. örnek</h1>
+          <div class="py-3">
+            <h4>Kariyer.net navbar</h4>
+            <img class="img-fluid" src="assets/images/kariyer-net.png" alt="" />
+            <p class="py-3">
+              Navbar da 'şehir veya ilçe ara' kısmına tıklanabiliyor ama
+              Javascript etkin değilken 'arama' butonu aktif olsa bile arama
+              yapılamamaktadır.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 px-5">
+          <h1>24. örnek</h1>
+          <div class="py-3">
+            <h4>Youtube abone ol-paylaş kısmı</h4>
+            <img
+              class="img-fluid"
+              src="assets/images/Youtubesection.png"
+              alt=""
+            />
+            <p class="py-3">
+              Youtube abone olunması ve link kopyalanıp paylaş kısmının aktif
+              olması için js ile fonksiyon gerekmektedir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-12 col-md-6 px-5">
+          <h1>25. örnek</h1>
+          <div class="py-3">
+            <h4>Netlify</h4>
+            <img class="img-fluid" src="assets/images/Netlify.png" alt="" />
+            <p class="py-3">
+              Netlify sitesinde aside menü kısmının, search arama butonunun ve
+              gerekli verilerin çekilmesi için js de fonksiyon yazılması
+              gerekmektedir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
